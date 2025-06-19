@@ -11,3 +11,11 @@ class Solution:
 class Solution:
     def maximumWealth(self, accounts: List[List[int]]) -> int:
         return max(map(sum, accounts))
+--------------------------------------------------------------
+class Solution:
+    def maximumWealth(self, accounts: List[List[int]]) -> int:
+        return max(sum(customer) for customer in accounts) # Using generator
+--------------------------------------------------------------
+class Solution:
+    def maximumWealth(self, accounts: List[List[int]]) -> int:
+        return max([sum(customer) for customer in accounts]) # Using list comprehension
